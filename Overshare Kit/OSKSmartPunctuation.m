@@ -43,7 +43,7 @@ typedef NS_ENUM(NSInteger, OSKQuoteDirection) {
 @implementation OSKSmartPunctuationComposedCharacterItem
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"%lu, %lu string: %@", self.range.location, self.range.length, self.string];
+    return [NSString stringWithFormat:@"%tu, %tu string: %@", self.range.location, self.range.length, self.string];
 }
 
 @end
