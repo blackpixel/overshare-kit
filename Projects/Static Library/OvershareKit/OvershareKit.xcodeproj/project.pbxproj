@@ -98,6 +98,8 @@
 		7FEE78F9181ED8FE000F684A /* UIDevice+OSKHardware.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE78AA181ED8FE000F684A /* UIDevice+OSKHardware.m */; };
 		7FEE78FA181ED8FE000F684A /* UIView+OSKUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE78AC181ED8FE000F684A /* UIView+OSKUtilities.m */; };
 		7FEE78FB181ED8FE000F684A /* UIViewController+OSKUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE78AE181ED8FE000F684A /* UIViewController+OSKUtilities.m */; };
+		936CC25A18BC1612002B47F5 /* ADNLogin.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9397618E18AC4B9700FDA64C /* ADNLogin.h */; };
+		936CC25B18BC1615002B47F5 /* ADNPassportLaunchView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9397619018AC4B9700FDA64C /* ADNPassportLaunchView.h */; };
 		93938B7718AC5440005B0F5A /* OvershareKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7FE4109D1821994B00B13AB1 /* OvershareKit.h */; };
 		93938B7818AC5440005B0F5A /* OSKDraftsActivity.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7FD649EA1895EB480021BD50 /* OSKDraftsActivity.h */; };
 		93938B7918AC5440005B0F5A /* OSKPresentationManager_Protected.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F4FF50E18516A5A00BFFF2B /* OSKPresentationManager_Protected.h */; };
@@ -225,6 +227,8 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
+				936CC25A18BC1612002B47F5 /* ADNLogin.h in CopyFiles */,
+				936CC25B18BC1615002B47F5 /* ADNPassportLaunchView.h in CopyFiles */,
 				93938B7718AC5440005B0F5A /* OvershareKit.h in CopyFiles */,
 				93938B7818AC5440005B0F5A /* OSKDraftsActivity.h in CopyFiles */,
 				93938B7918AC5440005B0F5A /* OSKPresentationManager_Protected.h in CopyFiles */,
