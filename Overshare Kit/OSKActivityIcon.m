@@ -15,6 +15,7 @@ static UIImage * OSKActivityIconMaskImage;
 @interface OSKActivityIcon ()
 
 @property (copy, nonatomic) NSString *imageKey;
+@property (retain, nonatomic) NSMutableDictionary *tintStates;
 
 @end
 
@@ -85,14 +86,16 @@ static UIImage * OSKActivityIconMaskImage;
         
         if (cachedImage) {
             [self setAlpha:1];
-            [self setBackgroundImage:cachedImage forState:UIControlStateNormal];
+            [self setImage:cachedImage forState:UIControlStateNormal];
+            [self setImage:cachedImage forState:UIControlStateHighlighted];
         } else {
             [self setAlpha:0];
 
             __weak OSKActivityIcon *weakSelf = self;
             [self maskImage:image withMask:[self maskImage] completion:^(UIImage *maskedImage) {
                 if ([weakSelf.imageKey isEqualToString:imageKey]) { // May have changed during processing
-                    [weakSelf setBackgroundImage:maskedImage forState:UIControlStateNormal];
+                    [weakSelf setImage:maskedImage forState:UIControlStateNormal];
+                    [weakSelf setImage:maskedImage forState:UIControlStateHighlighted];
                     [UIView animateWithDuration:0.1 delay:0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
                         [weakSelf setAlpha:1.0];
                     } completion:nil];
@@ -103,11 +106,44 @@ static UIImage * OSKActivityIconMaskImage;
     }
 }
 
+- (void)osk_setTintColor:(UIColor *)color forState:(UIControlState)state
+{
+    if(self.tintStates == nil)
+    {
+        self.tintStates = [NSMutableDictionary dictionary];
+    }
+    
+    [self.tintStates setObject:color forKey:@(state)];
+    
+    if(self.state == state)
+    {
+        self.tintColor = color;
+    }
+}
+
+- (UIColor *)osk_tintColorForState:(UIControlState)state
+{
+    return [self.tintStates objectForKey:@(state)];
+}
+
+- (void)setHighlighted:(BOOL)highlighted
+{
+    if(highlighted)
+    {
+        UIColor *pressedTintColor = [self.tintStates objectForKey:@(UIControlStateHighlighted)];
+        if(pressedTintColor)
+        {
+            self.tintColor = pressedTintColor;
+        }
+    }
+    else
+    {
+        UIColor *normalTintColor = [self.tintStates objectForKey:@(UIControlStateNormal)];
+        if(normalTintColor)
+        {
+            self.tintColor = normalTintColor;
+        }
+    }
+}
+
 @end
-
-
-
-
-
-
-

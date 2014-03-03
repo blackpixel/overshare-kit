@@ -38,4 +38,8 @@
 - (UIColor *)osk_color_characterCounter_normal;
 - (UIColor *)osk_color_characterCounter_warning;
 
+// [BPXL Additions]
+- (UIColor *)osk_color_buttonNormalTintColor;
+- (UIColor *)osk_color_buttonPressedTintColor;
+
 @end

@@ -137,6 +137,14 @@ static CGFloat OSKActivityIconBadgeWidth_Pad = 96.0f;
     if (icon == nil) {
         icon = [self.activity.class iconForIdiom:[[UIDevice currentDevice] userInterfaceIdiom]];
     }
+    if([presentationManager.colorDelegate respondsToSelector:@selector(osk_color_buttonNormalTintColor)] ||
+       [presentationManager.colorDelegate respondsToSelector:@selector(osk_color_buttonPressedTintColor)])
+    {
+        icon = [icon imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        self.iconButton.tintColor = [presentationManager.colorDelegate osk_color_buttonNormalTintColor];
+        [self.iconButton osk_setTintColor:[presentationManager.colorDelegate osk_color_buttonNormalTintColor] forState:UIControlStateNormal];
+        [self.iconButton osk_setTintColor:[presentationManager.colorDelegate osk_color_buttonPressedTintColor] forState:UIControlStateHighlighted];
+    }
     [self.iconButton setBackgroundImage:icon forActivityType:[self.activity.class activityType] displayString:name];
     
     [self setShowBadge:![self.activity isAlreadyPurchased]];
