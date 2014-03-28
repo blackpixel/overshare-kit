@@ -157,6 +157,8 @@ extern NSString * const OSKPresentationOption_PresentationEndingHandler;
                 presentingViewController:(UIViewController *)presentingViewController
                                  options:(NSDictionary *)options;
 
+- (void)dismissActivitySheet:(void(^)(void))completion;
+
 @end
 
 ///-----------------------------------------------
