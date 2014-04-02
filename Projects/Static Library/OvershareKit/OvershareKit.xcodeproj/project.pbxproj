@@ -100,6 +100,7 @@
 		7FEE78FB181ED8FE000F684A /* UIViewController+OSKUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE78AE181ED8FE000F684A /* UIViewController+OSKUtilities.m */; };
 		936CC25A18BC1612002B47F5 /* ADNLogin.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9397618E18AC4B9700FDA64C /* ADNLogin.h */; };
 		936CC25B18BC1615002B47F5 /* ADNPassportLaunchView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9397619018AC4B9700FDA64C /* ADNPassportLaunchView.h */; };
+		936E81AE18EB8EB0004D2366 /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 936E81AD18EB8EB0004D2366 /* SFHFKeychainUtils.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		93938B7718AC5440005B0F5A /* OvershareKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7FE4109D1821994B00B13AB1 /* OvershareKit.h */; };
 		93938B7818AC5440005B0F5A /* OSKDraftsActivity.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7FD649EA1895EB480021BD50 /* OSKDraftsActivity.h */; };
 		93938B7918AC5440005B0F5A /* OSKPresentationManager_Protected.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F4FF50E18516A5A00BFFF2B /* OSKPresentationManager_Protected.h */; };
@@ -669,6 +670,8 @@
 		7FFCFFEA1822CE23000BBCE9 /* OSKPresentationLocalization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSKPresentationLocalization.h; sourceTree = "<group>"; };
 		7FFCFFEB1822CE23000BBCE9 /* OSKPresentationStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSKPresentationStyle.h; sourceTree = "<group>"; };
 		7FFCFFEC1822CE23000BBCE9 /* OSKPresentationViewControllers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSKPresentationViewControllers.h; sourceTree = "<group>"; };
+		936E81AC18EB8EB0004D2366 /* SFHFKeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFHFKeychainUtils.h; path = "../../../Dependencies/Pocket-SDK/SDK/SFHFKeychainUtils.h"; sourceTree = "<group>"; };
+		936E81AD18EB8EB0004D2366 /* SFHFKeychainUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFHFKeychainUtils.m; path = "../../../Dependencies/Pocket-SDK/SDK/SFHFKeychainUtils.m"; sourceTree = "<group>"; };
 		9397618E18AC4B9700FDA64C /* ADNLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADNLogin.h; path = "../../../Dependencies/ADNLogin-SDK/SDK/ADNLogin.h"; sourceTree = "<group>"; };
 		9397618F18AC4B9700FDA64C /* ADNLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADNLogin.m; path = "../../../Dependencies/ADNLogin-SDK/SDK/ADNLogin.m"; sourceTree = "<group>"; };
 		9397619018AC4B9700FDA64C /* ADNPassportLaunchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADNPassportLaunchView.h; path = "../../../Dependencies/ADNLogin-SDK/SDK/ADNPassportLaunchView.h"; sourceTree = "<group>"; };
@@ -1101,6 +1104,8 @@
 		9397619518AC4BE500FDA64C /* Pocket */ = {
 			isa = PBXGroup;
 			children = (
+				936E81AC18EB8EB0004D2366 /* SFHFKeychainUtils.h */,
+				936E81AD18EB8EB0004D2366 /* SFHFKeychainUtils.m */,
 				9397619618AC4BF800FDA64C /* PocketAPI.h */,
 				9397619718AC4BF800FDA64C /* PocketAPI.m */,
 				9397619818AC4BF800FDA64C /* PocketAPI+NSOperation.h */,
@@ -1171,6 +1176,7 @@
 				7FEE78BE181ED8FE000F684A /* OSKActivityCollectionViewCell.m in Sources */,
 				7FEE78D1181ED8FE000F684A /* OSKFileManager.m in Sources */,
 				7FEE78F7181ED8FE000F684A /* OSKWebViewController.m in Sources */,
+				936E81AE18EB8EB0004D2366 /* SFHFKeychainUtils.m in Sources */,
 				7FEE78CB181ED8FE000F684A /* OSKApplicationCredential.m in Sources */,
 				7FEE78E2181ED8FE000F684A /* OSKPagedHorizontalLayout.m in Sources */,
 				7FEE78C2181ED8FE000F684A /* OSKActivityOperation.m in Sources */,
