@@ -1462,10 +1462,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/OvershareKit.dst;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$BUILT_PRODUCTS_DIR/include/${PRODUCT_NAME}",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$SRCROOT/../../../Dependencies/GooglePlus-SDK";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OvershareKit/OvershareKit-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
@@ -1478,10 +1475,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/OvershareKit.dst;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$BUILT_PRODUCTS_DIR/include/${PRODUCT_NAME}",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$SRCROOT/../../../Dependencies/GooglePlus-SDK";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OvershareKit/OvershareKit-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
