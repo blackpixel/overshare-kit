@@ -7,7 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F03EA2D18F5B8D000A4CEE4 /* OSKSaveToCameraRollActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F03EA2C18F5B8D000A4CEE4 /* OSKSaveToCameraRollActivity.m */; };
 		7F049469188AFE4600BE7C4E /* NSString+OSKEmoji.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F049468188AFE4600BE7C4E /* NSString+OSKEmoji.m */; };
+		7F14C95618DB5D1D00E635FE /* OSKTextViewAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F14C95518DB5D1D00E635FE /* OSKTextViewAttachment.m */; };
+		7F14C95918DB5DBC00E635FE /* OSKTextViewAttachmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F14C95818DB5DBC00E635FE /* OSKTextViewAttachmentView.m */; };
+		7F14C95C18DB5E9200E635FE /* OSKUITextViewSubstitute.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F14C95B18DB5E9200E635FE /* OSKUITextViewSubstitute.m */; };
+		7F14C95F18DB651800E635FE /* OSKCursorMovement.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F14C95E18DB651800E635FE /* OSKCursorMovement.m */; };
+		7F14C96418DB724000E635FE /* osk_linkPlaceholder_pad.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F14C96018DB724000E635FE /* osk_linkPlaceholder_pad.png */; };
+		7F14C96518DB724000E635FE /* osk_linkPlaceholder_pad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F14C96118DB724000E635FE /* osk_linkPlaceholder_pad@2x.png */; };
+		7F14C96618DB724000E635FE /* osk_linkPlaceholder_phone.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F14C96218DB724000E635FE /* osk_linkPlaceholder_phone.png */; };
+		7F14C96718DB724000E635FE /* osk_linkPlaceholder_phone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F14C96318DB724000E635FE /* osk_linkPlaceholder_phone@2x.png */; };
 		7F19F8FE181F227300E5EA52 /* osk-iap-badge-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F19F8FB181F227300E5EA52 /* osk-iap-badge-60@2x.png */; };
 		7F19F8FF181F227300E5EA52 /* osk-iap-badge-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F19F8FC181F227300E5EA52 /* osk-iap-badge-76.png */; };
 		7F19F900181F227300E5EA52 /* osk-iap-badge-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F19F8FD181F227300E5EA52 /* osk-iap-badge-76@2x.png */; };
@@ -223,7 +232,7 @@
 		7FEE77CC181ED8EF000F684A /* OSKShareableContentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE7746181ED8EE000F684A /* OSKShareableContentItem.m */; };
 		7FEE77CD181ED8EF000F684A /* OSKSMSActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE7748181ED8EE000F684A /* OSKSMSActivity.m */; };
 		7FEE77CE181ED8EF000F684A /* OSKSystemAccountStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE774A181ED8EF000F684A /* OSKSystemAccountStore.m */; };
-		7FEE77CF181ED8EF000F684A /* OSKTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE774C181ED8EF000F684A /* OSKTextView.m */; };
+		7FEE77CF181ED8EF000F684A /* OSKMicrobloggingTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE774C181ED8EF000F684A /* OSKMicrobloggingTextView.m */; };
 		7FEE77D0181ED8EF000F684A /* OSKThingsActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE774E181ED8EF000F684A /* OSKThingsActivity.m */; };
 		7FEE77D1181ED8EF000F684A /* OSKTwitterActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE7750181ED8EF000F684A /* OSKTwitterActivity.m */; };
 		7FEE77D2181ED8EF000F684A /* OSKTwitterText.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE7752181ED8EF000F684A /* OSKTwitterText.m */; };
@@ -236,11 +245,46 @@
 		7FEE77D9181ED8EF000F684A /* UIDevice+OSKHardware.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE7761181ED8EF000F684A /* UIDevice+OSKHardware.m */; };
 		7FEE77DA181ED8EF000F684A /* UIView+OSKUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE7763181ED8EF000F684A /* UIView+OSKUtilities.m */; };
 		7FEE77DB181ED8EF000F684A /* UIViewController+OSKUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE7765181ED8EF000F684A /* UIViewController+OSKUtilities.m */; };
+		8895C32E18A3B967000B7F28 /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8895C32B18A3B967000B7F28 /* GoogleOpenSource.framework */; };
+		8895C32F18A3B967000B7F28 /* GooglePlus.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8895C32C18A3B967000B7F28 /* GooglePlus.bundle */; };
+		8895C33018A3B967000B7F28 /* GooglePlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8895C32D18A3B967000B7F28 /* GooglePlus.framework */; };
+		8895C33218A3B9E6000B7F28 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8895C33118A3B9E6000B7F28 /* CoreMotion.framework */; };
+		8895C33418A3B9EF000B7F28 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8895C33318A3B9EF000B7F28 /* AddressBook.framework */; };
+		8895C33618A3B9F4000B7F28 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8895C33518A3B9F4000B7F28 /* AssetsLibrary.framework */; };
+		8895C33818A3BA00000B7F28 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8895C33718A3BA00000B7F28 /* CoreLocation.framework */; };
+		8895C33A18A3BA10000B7F28 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8895C33918A3BA10000B7F28 /* CoreText.framework */; };
+		8895C33C18A3BA16000B7F28 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8895C33B18A3BA16000B7F28 /* MediaPlayer.framework */; };
+		8895C33E18A3BA1B000B7F28 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8895C33D18A3BA1B000B7F28 /* Security.framework */; };
+		8895C34018A3BA24000B7F28 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8895C33F18A3BA24000B7F28 /* SystemConfiguration.framework */; };
+		8895C35218A3BFA2000B7F28 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8895C35118A3BFA2000B7F28 /* Icon-60@2x.png */; };
+		F2ED44FF27CCD7E9F8A34E77 /* GooglePlus-Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = F2ED4DB1EC62FB9EF52F15D0 /* GooglePlus-Icon-76.png */; };
+		F2ED453AABB8833C66910E03 /* GooglePlus-Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2ED46B9E187F11BFEF64BF2 /* GooglePlus-Icon-76@2x.png */; };
+		F2ED4696B1DB571FBBE9204A /* GooglePlus-Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2ED40569B315A0A210DC081 /* GooglePlus-Icon-60@2x.png */; };
+		F2ED491AD707CFCC464BF817 /* GooglePlus-Icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = F2ED4C771890AEE83986A976 /* GooglePlus-Icon-29.png */; };
+		F2ED49ADE384830009C8D633 /* OSKGooglePlusActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = F2ED429BFCE742838350E97F /* OSKGooglePlusActivity.m */; };
+		F2ED4C0E569909F3BCF64893 /* GooglePlus-Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = F2ED4DCA137D891D1B676B02 /* GooglePlus-Icon-60.png */; };
+		F2ED4C48AD68EA6C72DA6DB9 /* GooglePlus-Icon-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2ED41960B167BFC3B93056A /* GooglePlus-Icon-29@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F03EA2B18F5B8D000A4CEE4 /* OSKSaveToCameraRollActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSKSaveToCameraRollActivity.h; sourceTree = "<group>"; };
+		7F03EA2C18F5B8D000A4CEE4 /* OSKSaveToCameraRollActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSKSaveToCameraRollActivity.m; sourceTree = "<group>"; };
 		7F049467188AFE4600BE7C4E /* NSString+OSKEmoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+OSKEmoji.h"; sourceTree = "<group>"; };
 		7F049468188AFE4600BE7C4E /* NSString+OSKEmoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+OSKEmoji.m"; sourceTree = "<group>"; };
+		7F14C95118DB3B3E00E635FE /* OSKFacebookSharing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSKFacebookSharing.h; sourceTree = "<group>"; };
+		7F14C95218DB3C0A00E635FE /* OSKSyntaxHighlighting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSKSyntaxHighlighting.h; sourceTree = "<group>"; };
+		7F14C95418DB5D1D00E635FE /* OSKTextViewAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSKTextViewAttachment.h; sourceTree = "<group>"; };
+		7F14C95518DB5D1D00E635FE /* OSKTextViewAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSKTextViewAttachment.m; sourceTree = "<group>"; };
+		7F14C95718DB5DBC00E635FE /* OSKTextViewAttachmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSKTextViewAttachmentView.h; sourceTree = "<group>"; };
+		7F14C95818DB5DBC00E635FE /* OSKTextViewAttachmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSKTextViewAttachmentView.m; sourceTree = "<group>"; };
+		7F14C95A18DB5E9200E635FE /* OSKUITextViewSubstitute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSKUITextViewSubstitute.h; sourceTree = "<group>"; };
+		7F14C95B18DB5E9200E635FE /* OSKUITextViewSubstitute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSKUITextViewSubstitute.m; sourceTree = "<group>"; };
+		7F14C95D18DB651800E635FE /* OSKCursorMovement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSKCursorMovement.h; sourceTree = "<group>"; };
+		7F14C95E18DB651800E635FE /* OSKCursorMovement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSKCursorMovement.m; sourceTree = "<group>"; };
+		7F14C96018DB724000E635FE /* osk_linkPlaceholder_pad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = osk_linkPlaceholder_pad.png; sourceTree = "<group>"; };
+		7F14C96118DB724000E635FE /* osk_linkPlaceholder_pad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "osk_linkPlaceholder_pad@2x.png"; sourceTree = "<group>"; };
+		7F14C96218DB724000E635FE /* osk_linkPlaceholder_phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = osk_linkPlaceholder_phone.png; sourceTree = "<group>"; };
+		7F14C96318DB724000E635FE /* osk_linkPlaceholder_phone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "osk_linkPlaceholder_phone@2x.png"; sourceTree = "<group>"; };
 		7F19F8FB181F227300E5EA52 /* osk-iap-badge-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "osk-iap-badge-60@2x.png"; sourceTree = "<group>"; };
 		7F19F8FC181F227300E5EA52 /* osk-iap-badge-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "osk-iap-badge-76.png"; sourceTree = "<group>"; };
 		7F19F8FD181F227300E5EA52 /* osk-iap-badge-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "osk-iap-badge-76@2x.png"; sourceTree = "<group>"; };
@@ -564,8 +608,8 @@
 		7FEE7748181ED8EE000F684A /* OSKSMSActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSKSMSActivity.m; sourceTree = "<group>"; };
 		7FEE7749181ED8EE000F684A /* OSKSystemAccountStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSKSystemAccountStore.h; sourceTree = "<group>"; };
 		7FEE774A181ED8EF000F684A /* OSKSystemAccountStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSKSystemAccountStore.m; sourceTree = "<group>"; };
-		7FEE774B181ED8EF000F684A /* OSKTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSKTextView.h; sourceTree = "<group>"; };
-		7FEE774C181ED8EF000F684A /* OSKTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSKTextView.m; sourceTree = "<group>"; };
+		7FEE774B181ED8EF000F684A /* OSKMicrobloggingTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSKMicrobloggingTextView.h; sourceTree = "<group>"; };
+		7FEE774C181ED8EF000F684A /* OSKMicrobloggingTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSKMicrobloggingTextView.m; sourceTree = "<group>"; };
 		7FEE774D181ED8EF000F684A /* OSKThingsActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSKThingsActivity.h; sourceTree = "<group>"; };
 		7FEE774E181ED8EF000F684A /* OSKThingsActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSKThingsActivity.m; sourceTree = "<group>"; };
 		7FEE774F181ED8EF000F684A /* OSKTwitterActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSKTwitterActivity.h; sourceTree = "<group>"; };
@@ -594,6 +638,26 @@
 		7FFCFFE51822C3DA000BBCE9 /* OSKPresentationColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSKPresentationColor.h; sourceTree = "<group>"; };
 		7FFCFFE61822C3E2000BBCE9 /* OSKPresentationLocalization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSKPresentationLocalization.h; sourceTree = "<group>"; };
 		7FFCFFE81822C446000BBCE9 /* OSKPresentationViewControllers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSKPresentationViewControllers.h; sourceTree = "<group>"; };
+		8895C32B18A3B967000B7F28 /* GoogleOpenSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleOpenSource.framework; path = "../../../Dependencies/GooglePlus-SDK/GoogleOpenSource.framework"; sourceTree = "<group>"; };
+		8895C32C18A3B967000B7F28 /* GooglePlus.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GooglePlus.bundle; path = "../../../Dependencies/GooglePlus-SDK/GooglePlus.bundle"; sourceTree = "<group>"; };
+		8895C32D18A3B967000B7F28 /* GooglePlus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlus.framework; path = "../../../Dependencies/GooglePlus-SDK/GooglePlus.framework"; sourceTree = "<group>"; };
+		8895C33118A3B9E6000B7F28 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		8895C33318A3B9EF000B7F28 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		8895C33518A3B9F4000B7F28 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		8895C33718A3BA00000B7F28 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8895C33918A3BA10000B7F28 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		8895C33B18A3BA16000B7F28 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		8895C33D18A3BA1B000B7F28 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		8895C33F18A3BA24000B7F28 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		8895C35118A3BFA2000B7F28 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-60@2x.png"; path = "Overshare/Icon-60@2x.png"; sourceTree = "<group>"; };
+		F2ED40569B315A0A210DC081 /* GooglePlus-Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GooglePlus-Icon-60@2x.png"; sourceTree = "<group>"; };
+		F2ED41960B167BFC3B93056A /* GooglePlus-Icon-29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GooglePlus-Icon-29@2x.png"; sourceTree = "<group>"; };
+		F2ED429BFCE742838350E97F /* OSKGooglePlusActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSKGooglePlusActivity.m; sourceTree = "<group>"; };
+		F2ED46B9E187F11BFEF64BF2 /* GooglePlus-Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GooglePlus-Icon-76@2x.png"; sourceTree = "<group>"; };
+		F2ED4C771890AEE83986A976 /* GooglePlus-Icon-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GooglePlus-Icon-29.png"; sourceTree = "<group>"; };
+		F2ED4D135AF50DF7D6D486B4 /* OSKGooglePlusActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSKGooglePlusActivity.h; sourceTree = "<group>"; };
+		F2ED4DB1EC62FB9EF52F15D0 /* GooglePlus-Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GooglePlus-Icon-76.png"; sourceTree = "<group>"; };
+		F2ED4DCA137D891D1B676B02 /* GooglePlus-Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GooglePlus-Icon-60.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -601,15 +665,52 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8895C34018A3BA24000B7F28 /* SystemConfiguration.framework in Frameworks */,
+				8895C33E18A3BA1B000B7F28 /* Security.framework in Frameworks */,
+				8895C33C18A3BA16000B7F28 /* MediaPlayer.framework in Frameworks */,
+				8895C33A18A3BA10000B7F28 /* CoreText.framework in Frameworks */,
 				7FEE7635181ED83D000F684A /* CoreGraphics.framework in Frameworks */,
-				7FEE7637181ED83D000F684A /* UIKit.framework in Frameworks */,
+				8895C33218A3B9E6000B7F28 /* CoreMotion.framework in Frameworks */,
+				8895C33818A3BA00000B7F28 /* CoreLocation.framework in Frameworks */,
 				7FEE7633181ED83D000F684A /* Foundation.framework in Frameworks */,
+				8895C33618A3B9F4000B7F28 /* AssetsLibrary.framework in Frameworks */,
+				8895C33418A3B9EF000B7F28 /* AddressBook.framework in Frameworks */,
+				8895C33018A3B967000B7F28 /* GooglePlus.framework in Frameworks */,
+				7FEE7637181ED83D000F684A /* UIKit.framework in Frameworks */,
+				8895C32E18A3B967000B7F28 /* GoogleOpenSource.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F03EA2A18F5B8BD00A4CEE4 /* Save to Camera Roll */ = {
+			isa = PBXGroup;
+			children = (
+				7F03EA2B18F5B8D000A4CEE4 /* OSKSaveToCameraRollActivity.h */,
+				7F03EA2C18F5B8D000A4CEE4 /* OSKSaveToCameraRollActivity.m */,
+			);
+			name = "Save to Camera Roll";
+			sourceTree = "<group>";
+		};
+		7F14C95318DB5D0300E635FE /* OSKTextView */ = {
+			isa = PBXGroup;
+			children = (
+				7F14C95218DB3C0A00E635FE /* OSKSyntaxHighlighting.h */,
+				7FEE774B181ED8EF000F684A /* OSKMicrobloggingTextView.h */,
+				7FEE774C181ED8EF000F684A /* OSKMicrobloggingTextView.m */,
+				7F14C95418DB5D1D00E635FE /* OSKTextViewAttachment.h */,
+				7F14C95518DB5D1D00E635FE /* OSKTextViewAttachment.m */,
+				7F14C95718DB5DBC00E635FE /* OSKTextViewAttachmentView.h */,
+				7F14C95818DB5DBC00E635FE /* OSKTextViewAttachmentView.m */,
+				7F14C95A18DB5E9200E635FE /* OSKUITextViewSubstitute.h */,
+				7F14C95B18DB5E9200E635FE /* OSKUITextViewSubstitute.m */,
+				7F14C95D18DB651800E635FE /* OSKCursorMovement.h */,
+				7F14C95E18DB651800E635FE /* OSKCursorMovement.m */,
+			);
+			name = OSKTextView;
+			sourceTree = "<group>";
+		};
 		7F43DEB418217964003BE9B6 /* Facebook */ = {
 			isa = PBXGroup;
 			children = (
@@ -658,6 +759,7 @@
 		7FEE7626181ED83D000F684A = {
 			isa = PBXGroup;
 			children = (
+				8895C35118A3BFA2000B7F28 /* Icon-60@2x.png */,
 				7FEE7922181EDC71000F684A /* Third-Party Dependencies */,
 				7FEE7693181ED8EE000F684A /* Overshare Kit */,
 				7FEE7638181ED83D000F684A /* Sample App Files */,
@@ -677,6 +779,17 @@
 		7FEE7631181ED83D000F684A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8895C33F18A3BA24000B7F28 /* SystemConfiguration.framework */,
+				8895C33D18A3BA1B000B7F28 /* Security.framework */,
+				8895C33B18A3BA16000B7F28 /* MediaPlayer.framework */,
+				8895C33918A3BA10000B7F28 /* CoreText.framework */,
+				8895C33718A3BA00000B7F28 /* CoreLocation.framework */,
+				8895C33518A3B9F4000B7F28 /* AssetsLibrary.framework */,
+				8895C33318A3B9EF000B7F28 /* AddressBook.framework */,
+				8895C33118A3B9E6000B7F28 /* CoreMotion.framework */,
+				8895C32B18A3B967000B7F28 /* GoogleOpenSource.framework */,
+				8895C32C18A3B967000B7F28 /* GooglePlus.bundle */,
+				8895C32D18A3B967000B7F28 /* GooglePlus.framework */,
 				7FEE7632181ED83D000F684A /* Foundation.framework */,
 				7FEE7634181ED83D000F684A /* CoreGraphics.framework */,
 				7FEE7636181ED83D000F684A /* UIKit.framework */,
@@ -745,6 +858,10 @@
 		7FEE7694181ED8EE000F684A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				7F14C96018DB724000E635FE /* osk_linkPlaceholder_pad.png */,
+				7F14C96118DB724000E635FE /* osk_linkPlaceholder_pad@2x.png */,
+				7F14C96218DB724000E635FE /* osk_linkPlaceholder_phone.png */,
+				7F14C96318DB724000E635FE /* osk_linkPlaceholder_phone@2x.png */,
 				7FD649DB1895EAF20021BD50 /* Drafts-Icon-29.png */,
 				7FD649DC1895EAF20021BD50 /* Drafts-Icon-29@2x.png */,
 				7FD649DD1895EAF20021BD50 /* Drafts-Icon-60@2x.png */,
@@ -855,6 +972,12 @@
 				7FEE76B7181ED8EE000F684A /* Things-Icon-60@2x.png */,
 				7FEE76B8181ED8EE000F684A /* Things-Icon-76.png */,
 				7FEE76B9181ED8EE000F684A /* Things-Icon-76@2x.png */,
+				F2ED4C771890AEE83986A976 /* GooglePlus-Icon-29.png */,
+				F2ED41960B167BFC3B93056A /* GooglePlus-Icon-29@2x.png */,
+				F2ED4DCA137D891D1B676B02 /* GooglePlus-Icon-60.png */,
+				F2ED40569B315A0A210DC081 /* GooglePlus-Icon-60@2x.png */,
+				F2ED4DB1EC62FB9EF52F15D0 /* GooglePlus-Icon-76.png */,
+				F2ED46B9E187F11BFEF64BF2 /* GooglePlus-Icon-76@2x.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -934,6 +1057,8 @@
 		7FEE78FF181ED969000F684A /* Activities (Subclasses) */ = {
 			isa = PBXGroup;
 			children = (
+				7F03EA2A18F5B8BD00A4CEE4 /* Save to Camera Roll */,
+				88B98D1218A28F05007676CA /* GooglePlus */,
 				7FEE78FD181ED94F000F684A /* 1Password (Browser) */,
 				7FEE78FE181ED95D000F684A /* 1Password (Search) */,
 				7FEE7905181ED9DB000F684A /* App.net */,
@@ -992,8 +1117,7 @@
 		7FEE7902181ED987000F684A /* Custom Views Etc. */ = {
 			isa = PBXGroup;
 			children = (
-				7FEE774B181ED8EF000F684A /* OSKTextView.h */,
-				7FEE774C181ED8EF000F684A /* OSKTextView.m */,
+				7F14C95318DB5D0300E635FE /* OSKTextView */,
 				7FEE7729181ED8EE000F684A /* OSKNavigationController.h */,
 				7FEE772A181ED8EE000F684A /* OSKNavigationController.m */,
 				7FEE76FE181ED8EE000F684A /* OSKBorderedButton.h */,
@@ -1023,6 +1147,7 @@
 				7FEE76E7181ED8EE000F684A /* OSKActivityOperation.m */,
 				7FEE76FD181ED8EE000F684A /* OSKBloggingActivity.h */,
 				7FEE7725181ED8EE000F684A /* OSKMicrobloggingActivity.h */,
+				7F14C95118DB3B3E00E635FE /* OSKFacebookSharing.h */,
 				7F4E3AFF18959AA000719268 /* OSKURLSchemeActivity.h */,
 				7F4E3B0018959B9800719268 /* OSKXCallbackURLInfo.h */,
 			);
@@ -1373,6 +1498,15 @@
 			name = ADNLogin;
 			sourceTree = "<group>";
 		};
+		88B98D1218A28F05007676CA /* GooglePlus */ = {
+			isa = PBXGroup;
+			children = (
+				F2ED429BFCE742838350E97F /* OSKGooglePlusActivity.m */,
+				F2ED4D135AF50DF7D6D486B4 /* OSKGooglePlusActivity.h */,
+			);
+			name = GooglePlus;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1404,7 +1538,7 @@
 				ORGANIZATIONNAME = "Overshare Kit";
 				TargetAttributes = {
 					7FEE762E181ED83D000F684A = {
-						DevelopmentTeam = J854U2BUWB;
+						DevelopmentTeam = YGAZHQXHH4;
 					};
 				};
 			};
@@ -1452,6 +1586,7 @@
 				7F77F4301822F7FC0019452C /* Pocket-Icon-29.png in Resources */,
 				7F77F4261822F60B0019452C /* osk-iconMask-bw-29.png in Resources */,
 				7F339D72185361AF0020CF9C /* Chrome-Icon-29.png in Resources */,
+				7F14C96618DB724000E635FE /* osk_linkPlaceholder_phone.png in Resources */,
 				7F77F4391822FAC60019452C /* Icon-76.png in Resources */,
 				7FEE777C181ED8EF000F684A /* osk-iconMask-bw-76@2x.png in Resources */,
 				7F19F907181F4C0A00E5EA52 /* osk-iap-badge-60.png in Resources */,
@@ -1471,6 +1606,7 @@
 				7FE4672F1821E9650054D2BC /* osk-pinboardIcon-29@2x.png in Resources */,
 				7FEE7766181ED8EF000F684A /* 1Password-Icon-120.png in Resources */,
 				7FD649E21895EAF20021BD50 /* Drafts-Icon-60@2x.png in Resources */,
+				8895C35218A3BFA2000B7F28 /* Icon-60@2x.png in Resources */,
 				7FEE776D181ED8EF000F684A /* Instapaper-Icon-76@2x.png in Resources */,
 				7FE467011821C9F20054D2BC /* osk-safariIcon-76.png in Resources */,
 				7FE467271821E9650054D2BC /* osk-airDropIcon-76@2x.png in Resources */,
@@ -1500,6 +1636,7 @@
 				7FE466F31821C9F20054D2BC /* osk-appStoreIcon-76.png in Resources */,
 				7FDCDE9B181EE1BA00AC2985 /* type.jpg in Resources */,
 				7FEE776F181ED8EF000F684A /* Omnifocus-Icon-72.png in Resources */,
+				7F14C96418DB724000E635FE /* osk_linkPlaceholder_pad.png in Resources */,
 				7FA91AE91889F53500A5DF9B /* ReadingList-Icon-76.png in Resources */,
 				7FEE7771181ED8EF000F684A /* osk-airDropIcon-60@2x.png in Resources */,
 				7FEE777F181ED8EF000F684A /* osk-readabilityIcon-60@2x.png in Resources */,
@@ -1515,6 +1652,7 @@
 				7F77F42C1822F7760019452C /* osk-readabilityIcon-29.png in Resources */,
 				7FDCDE97181EE1BA00AC2985 /* rain.jpg in Resources */,
 				7FD16DAF1876367A0035960C /* link-button.png in Resources */,
+				8895C32F18A3B967000B7F28 /* GooglePlus.bundle in Resources */,
 				7FEE776C181ED8EF000F684A /* Instapaper-Icon-76.png in Resources */,
 				7FE467321821E9650054D2BC /* osk-readabilityIcon-29@2x.png in Resources */,
 				7FD649E01895EAF20021BD50 /* Drafts-Icon-29.png in Resources */,
@@ -1548,6 +1686,7 @@
 				7FDCDE96181EE1BA00AC2985 /* Icon-60@2x.png in Resources */,
 				7FE466ED1821C9F20054D2BC /* Chrome-Icon-29@2x.png in Resources */,
 				7FEE777A181ED8EF000F684A /* osk-iconMask-bw-60@2x.png in Resources */,
+				7F14C96518DB724000E635FE /* osk_linkPlaceholder_pad@2x.png in Resources */,
 				7FEE7781181ED8EF000F684A /* osk-twitterIcon-60@2x.png in Resources */,
 				7FE467021821C9F20054D2BC /* osk-safariIcon-76@2x.png in Resources */,
 				7FE466F61821C9F20054D2BC /* osk-facebookIcon-76@2x.png in Resources */,
@@ -1555,6 +1694,13 @@
 				7FEE77BE181ED8EF000F684A /* OSKMicroblogPublishingViewController.xib in Resources */,
 				7FE466F71821C9F20054D2BC /* osk-flickrIcon-60@2x.png in Resources */,
 				7F19F8FE181F227300E5EA52 /* osk-iap-badge-60@2x.png in Resources */,
+				F2ED491AD707CFCC464BF817 /* GooglePlus-Icon-29.png in Resources */,
+				F2ED4C48AD68EA6C72DA6DB9 /* GooglePlus-Icon-29@2x.png in Resources */,
+				F2ED4C0E569909F3BCF64893 /* GooglePlus-Icon-60.png in Resources */,
+				F2ED4696B1DB571FBBE9204A /* GooglePlus-Icon-60@2x.png in Resources */,
+				7F14C96718DB724000E635FE /* osk_linkPlaceholder_phone@2x.png in Resources */,
+				F2ED44FF27CCD7E9F8A34E77 /* GooglePlus-Icon-76.png in Resources */,
+				F2ED453AABB8833C66910E03 /* GooglePlus-Icon-76@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1587,6 +1733,7 @@
 				7F049469188AFE4600BE7C4E /* NSString+OSKEmoji.m in Sources */,
 				7FEE77D0181ED8EF000F684A /* OSKThingsActivity.m in Sources */,
 				7FEE77B9181ED8EF000F684A /* OSKManagedAccount.m in Sources */,
+				7F03EA2D18F5B8D000A4CEE4 /* OSKSaveToCameraRollActivity.m in Sources */,
 				7F43DEB818217986003BE9B6 /* OSKFacebookPublishingViewController.m in Sources */,
 				7F43DEBC1821804C003BE9B6 /* OSKFacebookAudienceChooserViewController.m in Sources */,
 				7FEE77B8181ED8EF000F684A /* OSKMailComposeViewController.m in Sources */,
@@ -1604,6 +1751,8 @@
 				7FEE7797181ED8EF000F684A /* OSKActionSheet.m in Sources */,
 				7F78E9AC1820E5630042CF02 /* OSKPocketAccountViewController.m in Sources */,
 				7FEE77AE181ED8EF000F684A /* OSKEmailActivity.m in Sources */,
+				7F14C95918DB5DBC00E635FE /* OSKTextViewAttachmentView.m in Sources */,
+				7F14C95F18DB651800E635FE /* OSKCursorMovement.m in Sources */,
 				7FEE77B7181ED8EF000F684A /* OSKKeychainUtility.m in Sources */,
 				7FE467391821F4010054D2BC /* OSKAccountTypeCell.m in Sources */,
 				7FEE778F181ED8EF000F684A /* NSHTTPURLResponse+OSKUtilities.m in Sources */,
@@ -1630,18 +1779,20 @@
 				7FEE7792181ED8EF000F684A /* NSString+OSKDerp.m in Sources */,
 				7FEE77A8181ED8EF000F684A /* OSKAppDotNetAuthenticationViewController.m in Sources */,
 				7F1DA9E3183C6B280082356D /* OSKLinkShorteningUtility.m in Sources */,
+				7F14C95C18DB5E9200E635FE /* OSKUITextViewSubstitute.m in Sources */,
 				7FEE77D5181ED8EF000F684A /* OSKUsernamePasswordCell.m in Sources */,
 				7FEE77DB181ED8EF000F684A /* UIViewController+OSKUtilities.m in Sources */,
 				7F341E1D18943EEE00CBA9B0 /* OSKSmartPunctuation.m in Sources */,
 				7FEE763F181ED83D000F684A /* main.m in Sources */,
 				7FEE779F181ED8EF000F684A /* OSKActivityIndicatorItem.m in Sources */,
 				7FEE778D181ED8EF000F684A /* NSDate+OSK_ISO8601.m in Sources */,
-				7FEE77CF181ED8EF000F684A /* OSKTextView.m in Sources */,
+				7FEE77CF181ED8EF000F684A /* OSKMicrobloggingTextView.m in Sources */,
 				7FEE77BD181ED8EF000F684A /* OSKMicroblogPublishingViewController.m in Sources */,
 				7F19F92A1820A34F00E5EA52 /* OSKAccountManagementViewController.m in Sources */,
 				7FEE77AF181ED8EF000F684A /* OSKFacebookActivity.m in Sources */,
 				7FEE77CB181ED8EF000F684A /* OSKShareableContent.m in Sources */,
 				7FEE7791181ED8EF000F684A /* NSString+OSK_UUID.m in Sources */,
+				7F14C95618DB5D1D00E635FE /* OSKTextViewAttachment.m in Sources */,
 				7FEE77C3181ED8EF000F684A /* OSKPinboardActivity.m in Sources */,
 				7F75BF401821588700D3681E /* SFHFKeychainUtils.m in Sources */,
 				7FEE77D8181ED8EF000F684A /* UIColor+OSKUtility.m in Sources */,
@@ -1666,6 +1817,7 @@
 				7FEE77D6181ED8EF000F684A /* OSKUsernamePasswordViewController.m in Sources */,
 				7FEE77AB181ED8EF000F684A /* OSKBorderedButton.m in Sources */,
 				7FEE779D181ED8EF000F684A /* OSKActivityCollectionViewController.m in Sources */,
+				F2ED49ADE384830009C8D633 /* OSKGooglePlusActivity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1763,10 +1915,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"../../../Dependencies/GooglePlus-SDK",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Overshare/Overshare-Prefix.pch";
 				INFOPLIST_FILE = "Overshare/Overshare-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1777,10 +1936,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"../../../Dependencies/GooglePlus-SDK",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Overshare/Overshare-Prefix.pch";
 				INFOPLIST_FILE = "Overshare/Overshare-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

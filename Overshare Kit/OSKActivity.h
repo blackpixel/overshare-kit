@@ -23,12 +23,14 @@ extern NSString * const OSKActivityType_iOS_Email;
 extern NSString * const OSKActivityType_iOS_CopyToPasteboard;
 extern NSString * const OSKActivityType_iOS_AirDrop;
 extern NSString * const OSKActivityType_iOS_ReadingList;
+extern NSString * const OSKActivityType_iOS_SaveToCameraRoll;
 extern NSString * const OSKActivityType_API_AppDotNet;
 extern NSString * const OSKActivityType_API_500Pixels;
 extern NSString * const OSKActivityType_API_Instapaper;
 extern NSString * const OSKActivityType_API_Readability;
 extern NSString * const OSKActivityType_API_Pocket;
 extern NSString * const OSKActivityType_API_Pinboard;
+extern NSString * const OSKActivityType_API_GooglePlus;
 extern NSString * const OSKActivityType_URLScheme_Instagram;
 extern NSString * const OSKActivityType_URLScheme_Riposte;
 extern NSString * const OSKActivityType_URLScheme_Tweetbot;
@@ -62,6 +64,7 @@ typedef NS_ENUM(NSInteger, OSKPublishingMethod) {
     OSKPublishingMethod_ViewController_Microblogging,   // e.g. Twitter & App.net
     OSKPublishingMethod_ViewController_Blogging,        // e.g. Tumblr or WordPress
     OSKPublishingMethod_ViewController_Facebook,        // duh
+    OSKPublishingMethod_ViewController_GooglePlus,        // duh
 };
 
 ///--------------------------------------------------------

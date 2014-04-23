@@ -26,6 +26,7 @@
 #import "OSKDraftsActivity.h"
 #import "OSKEmailActivity.h"
 #import "OSKFacebookActivity.h"
+#import "OSKGooglePlusActivity.h"
 #import "OSKInstapaperActivity.h"
 #import "OSKReadingListActivity.h"
 #import "OSKOmnifocusActivity.h"
@@ -33,6 +34,7 @@
 #import "OSKPocketActivity.h"
 #import "OSKReadabilityActivity.h"
 #import "OSKSafariActivity.h"
+#import "OSKSaveToCameraRollActivity.h"
 #import "OSKSMSActivity.h"
 #import "OSKThingsActivity.h"
 #import "OSKTwitterActivity.h"
@@ -45,6 +47,7 @@ static NSString * OSKApplicationCredential_Pocket_iPad_Dev = @"19568-04ba9f583c2
 static NSString * OSKApplicationCredential_Readability_Key = @"oversharedev";
 static NSString * OSKApplicationCredential_Readability_Secret = @"hWA7rwPqzvNEaK8ZbRBw9fc5kKBQMdRK";
 static NSString * OSKApplicationCredential_Facebook_Key = @"554155471323751";
+static NSString * OSKApplicationCredential_GooglePlus_Key = @"810720596839-qccfsg2b2ljn0cnu76rha48f5dguns3j.apps.googleusercontent.com";
 #endif
 
 NSString * const OSKActivitiesManagerDidMarkActivityTypesAsPurchasedNotification = @"OSKActivitiesManagerDidMarkActivityTypesAsPurchasedNotification";
@@ -120,8 +123,13 @@ static NSString * OSKActivitiesManagerPersistentExclusionsKey = @"OSKActivitiesM
         }
         else if ([item.itemType isEqualToString:OSKShareableContentItemType_MicroblogPost]) {
             activitiesToAdd = [self builtInActivitiesForMicroblogPostItem:(OSKMicroblogPostContentItem *)item
-                                                  excludedActivityTypes:excludedActivityTypes
-                                                      requireOperations:requireOperations];
+                                                    excludedActivityTypes:excludedActivityTypes
+                                                        requireOperations:requireOperations];
+        }
+        else if ([item.itemType isEqualToString:OSKShareableContentItemType_Facebook]) {
+            activitiesToAdd = [self builtInActivitiesForFacebookItem:(OSKFacebookContentItem *)item
+                                               excludedActivityTypes:excludedActivityTypes
+                                                   requireOperations:requireOperations];
         }
         else if ([item.itemType isEqualToString:OSKShareableContentItemType_BlogPost]) {
             activitiesToAdd = [self builtInActivitiesForBlogPostItem:(OSKBlogPostContentItem *)item
@@ -216,6 +224,10 @@ static NSString * OSKActivitiesManagerPersistentExclusionsKey = @"OSKActivitiesM
     additionals = [self contentItemsOfType:OSKShareableContentItemType_Email inArray:content.additionalItems];
     [sortedItems addObjectsFromArray:additionals];
     
+    if (content.facebookItem) { [sortedItems addObject:content.facebookItem]; }
+    additionals = [self contentItemsOfType:OSKShareableContentItemType_Facebook inArray:content.additionalItems];
+    [sortedItems addObjectsFromArray:additionals];
+    
     if (content.microblogPostItem) { [sortedItems addObject:content.microblogPostItem]; }
     additionals = [self contentItemsOfType:OSKShareableContentItemType_MicroblogPost inArray:content.additionalItems];
     [sortedItems addObjectsFromArray:additionals];
@@ -287,19 +299,32 @@ static NSString * OSKActivitiesManagerPersistentExclusionsKey = @"OSKActivitiesM
                                                     item:item];
     if (twitter) { [activities addObject:twitter]; }
     
-    OSKFacebookActivity *facebook = [self validActivityForType:[OSKFacebookActivity activityType]
-                                                       class:[OSKFacebookActivity class]
-                                               excludedTypes:excludedActivityTypes
-                                           requireOperations:requireOperations
-                                                        item:item];
-    if (facebook) { [activities addObject:facebook]; }
-    
     OSKAppDotNetActivity *appDotNet = [self validActivityForType:[OSKAppDotNetActivity activityType]
                                                        class:[OSKAppDotNetActivity class]
                                                excludedTypes:excludedActivityTypes
                                            requireOperations:requireOperations
                                                         item:item];
     if (appDotNet) { [activities addObject:appDotNet]; }
+
+    OSKGooglePlusActivity *googlePlus = [self validActivityForType:[OSKGooglePlusActivity activityType]
+                                                             class:[OSKGooglePlusActivity class]
+                                                     excludedTypes:excludedActivityTypes
+                                                 requireOperations:requireOperations
+                                                              item:item];
+    if (googlePlus) { [activities addObject:googlePlus]; }
+    
+    return activities;
+}
+
+- (NSArray *)builtInActivitiesForFacebookItem:(OSKFacebookContentItem *)item excludedActivityTypes:(NSArray *)excludedActivityTypes requireOperations:(BOOL)requireOperations {
+    NSMutableArray *activities = [[NSMutableArray alloc] init];
+    
+    OSKFacebookActivity *facebook = [self validActivityForType:[OSKFacebookActivity activityType]
+                                                         class:[OSKFacebookActivity class]
+                                                 excludedTypes:excludedActivityTypes
+                                             requireOperations:requireOperations
+                                                          item:item];
+    if (facebook) { [activities addObject:facebook]; }
     
     return activities;
 }
@@ -381,7 +406,16 @@ static NSString * OSKActivitiesManagerPersistentExclusionsKey = @"OSKActivitiesM
 }
 
 - (NSArray *)builtInActivitiesForPhotosharingItem:(OSKPhotoSharingContentItem *)item excludedActivityTypes:(NSArray *)excludedActivityTypes requireOperations:(BOOL)requireOperations {
-    return nil;
+    NSMutableArray *activities = [[NSMutableArray alloc] init];
+    
+    OSKSaveToCameraRollActivity *saveToCameraRoll = [self validActivityForType:[OSKSaveToCameraRollActivity activityType]
+                                                                         class:[OSKSaveToCameraRollActivity class]
+                                                                 excludedTypes:excludedActivityTypes
+                                                             requireOperations:requireOperations
+                                                                          item:item];
+    if (saveToCameraRoll) { [activities addObject:saveToCameraRoll]; }
+    
+    return activities;
 }
 
 - (NSArray *)builtInActivitiesForReadLaterItem:(OSKReadLaterContentItem *)item excludedActivityTypes:(NSArray *)excludedActivityTypes requireOperations:(BOOL)requireOperations {
@@ -608,36 +642,42 @@ static NSString * OSKActivitiesManagerPersistentExclusionsKey = @"OSKActivitiesM
     if ([self.customizationsDelegate respondsToSelector:@selector(applicationCredentialForActivityType:)]) {
         appCredential = [self.customizationsDelegate applicationCredentialForActivityType:activityType];
     }
-//#if DEBUG == 1
-//    else {
-//        // THESE ARE DEVELOPMENT CREDENTIALS ONLY, TO MAKE DEMOING OVERSHARE SIMPLE FOR US.
-//        // YOUR APP SHOULD OBTAIN AND PROVIDE YOUR OWN CREDENTIALS BEFORE SHIPPING!!!
-//        if ([activityType isEqualToString:OSKActivityType_iOS_Facebook]) {
-//            appCredential = [[OSKApplicationCredential alloc]
-//                             initWithOvershareApplicationKey:OSKApplicationCredential_Facebook_Key
-//                             applicationSecret:nil
-//                             appName:@"Overshare"];
-//        }
-//        else if ([activityType isEqualToString:OSKActivityType_API_AppDotNet]) {
-//            appCredential = [[OSKApplicationCredential alloc]
-//                             initWithOvershareApplicationKey:OSKApplicationCredential_AppDotNet_Dev
-//                             applicationSecret:nil
-//                             appName:@"Overshare"];
-//        }
-//        else if ([activityType isEqualToString:OSKActivityType_API_Pocket]) {
-//            appCredential = [[OSKApplicationCredential alloc]
-//                             initWithOvershareApplicationKey:OSKApplicationCredential_Pocket_iPhone_Dev
-//                             applicationSecret:nil
-//                             appName:@"Overshare"];
-//        }
-//        else if ([activityType isEqualToString:OSKActivityType_API_Readability]) {
-//            appCredential = [[OSKApplicationCredential alloc]
-//                             initWithOvershareApplicationKey:OSKApplicationCredential_Readability_Key
-//                             applicationSecret:OSKApplicationCredential_Readability_Secret
-//                             appName:@"Overshare"];
-//        }
-//    }
-//#endif
+#if OSK_DEBUG == 1
+    else {
+        // THESE ARE DEVELOPMENT CREDENTIALS ONLY, TO MAKE DEMOING OVERSHARE SIMPLE FOR US.
+        // YOUR APP SHOULD OBTAIN AND PROVIDE YOUR OWN CREDENTIALS BEFORE SHIPPING!!!
+        if ([activityType isEqualToString:OSKActivityType_iOS_Facebook]) {
+            appCredential = [[OSKApplicationCredential alloc]
+                             initWithOvershareApplicationKey:OSKApplicationCredential_Facebook_Key
+                             applicationSecret:nil
+                             appName:@"Overshare"];
+        }
+        else if ([activityType isEqualToString:OSKActivityType_API_AppDotNet]) {
+            appCredential = [[OSKApplicationCredential alloc]
+                             initWithOvershareApplicationKey:OSKApplicationCredential_AppDotNet_Dev
+                             applicationSecret:nil
+                             appName:@"Overshare"];
+        }
+        else if ([activityType isEqualToString:OSKActivityType_API_Pocket]) {
+            appCredential = [[OSKApplicationCredential alloc]
+                             initWithOvershareApplicationKey:OSKApplicationCredential_Pocket_iPhone_Dev
+                             applicationSecret:nil
+                             appName:@"Overshare"];
+        }
+        else if ([activityType isEqualToString:OSKActivityType_API_Readability]) {
+            appCredential = [[OSKApplicationCredential alloc]
+                             initWithOvershareApplicationKey:OSKApplicationCredential_Readability_Key
+                             applicationSecret:OSKApplicationCredential_Readability_Secret
+                             appName:@"Overshare"];
+        }
+        else if ([activityType isEqualToString:OSKActivityType_API_GooglePlus]) {
+            appCredential = [[OSKApplicationCredential alloc]
+                             initWithOvershareApplicationKey:OSKApplicationCredential_GooglePlus_Key
+                             applicationSecret:nil
+                             appName:@"Overshare"];
+        }
+    }
+#endif
     return appCredential;
 }
 
