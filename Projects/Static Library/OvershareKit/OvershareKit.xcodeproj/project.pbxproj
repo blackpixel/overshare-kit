@@ -99,8 +99,6 @@
 		7FEE78F9181ED8FE000F684A /* UIDevice+OSKHardware.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE78AA181ED8FE000F684A /* UIDevice+OSKHardware.m */; };
 		7FEE78FA181ED8FE000F684A /* UIView+OSKUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE78AC181ED8FE000F684A /* UIView+OSKUtilities.m */; };
 		7FEE78FB181ED8FE000F684A /* UIViewController+OSKUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE78AE181ED8FE000F684A /* UIViewController+OSKUtilities.m */; };
-		8895C32918A3B890000B7F28 /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8895C32618A3B890000B7F28 /* GoogleOpenSource.framework */; };
-		8895C32A18A3B890000B7F28 /* GooglePlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8895C32818A3B890000B7F28 /* GooglePlus.framework */; };
 		8895C34218A3BA48000B7F28 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8895C34118A3BA48000B7F28 /* AddressBook.framework */; };
 		8895C34418A3BA4F000B7F28 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8895C34318A3BA4F000B7F28 /* AssetsLibrary.framework */; };
 		8895C34618A3BA59000B7F28 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8895C34518A3BA59000B7F28 /* CoreLocation.framework */; };
@@ -113,6 +111,10 @@
 		936CC25B18BC1615002B47F5 /* ADNPassportLaunchView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9397619018AC4B9700FDA64C /* ADNPassportLaunchView.h */; };
 		936E81AE18EB8EB0004D2366 /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 936E81AD18EB8EB0004D2366 /* SFHFKeychainUtils.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		939130F519083EF600C7678E /* OSKUITextViewSubstitute.m in Sources */ = {isa = PBXBuildFile; fileRef = 939130F419083EF600C7678E /* OSKUITextViewSubstitute.m */; };
+		939130FE1908658B00C7678E /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93E2405C19083CB600FDE5B3 /* GoogleOpenSource.framework */; };
+		939130FF1908658B00C7678E /* GooglePlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93E2405E19083CB600FDE5B3 /* GooglePlus.framework */; };
+		939131001908659700C7678E /* GoogleOpenSource.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 93E2405C19083CB600FDE5B3 /* GoogleOpenSource.framework */; };
+		939131011908659700C7678E /* GooglePlus.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 93E2405E19083CB600FDE5B3 /* GooglePlus.framework */; };
 		93938B7718AC5440005B0F5A /* OvershareKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7FE4109D1821994B00B13AB1 /* OvershareKit.h */; };
 		93938B7818AC5440005B0F5A /* OSKDraftsActivity.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7FD649EA1895EB480021BD50 /* OSKDraftsActivity.h */; };
 		93938B7918AC5440005B0F5A /* OSKPresentationManager_Protected.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F4FF50E18516A5A00BFFF2B /* OSKPresentationManager_Protected.h */; };
@@ -234,8 +236,6 @@
 		93E2405219083C1D00FDE5B3 /* OSKFacebookSharing.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 93E2405119083C1000FDE5B3 /* OSKFacebookSharing.h */; };
 		93E2405419083C4F00FDE5B3 /* OSKGooglePlusActivity.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 93E2405319083C4D00FDE5B3 /* OSKGooglePlusActivity.h */; };
 		93E2405619083C6D00FDE5B3 /* OSKGooglePlusActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E2405519083C6D00FDE5B3 /* OSKGooglePlusActivity.m */; };
-		93E2405F19083CB600FDE5B3 /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93E2405C19083CB600FDE5B3 /* GoogleOpenSource.framework */; };
-		93E2406019083CB600FDE5B3 /* GooglePlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93E2405E19083CB600FDE5B3 /* GooglePlus.framework */; };
 		93E2406319083CF600FDE5B3 /* OSKCursorMovement.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E2406219083CF600FDE5B3 /* OSKCursorMovement.m */; };
 		93E2406819083D2900FDE5B3 /* OSKTextViewAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E2406619083D2900FDE5B3 /* OSKTextViewAttachment.m */; };
 		93E2406919083D2900FDE5B3 /* OSKTextViewAttachmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E2406719083D2900FDE5B3 /* OSKTextViewAttachmentView.m */; };
@@ -248,6 +248,8 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
+				939131001908659700C7678E /* GoogleOpenSource.framework in CopyFiles */,
+				939131011908659700C7678E /* GooglePlus.framework in CopyFiles */,
 				936CC25A18BC1612002B47F5 /* ADNLogin.h in CopyFiles */,
 				936CC25B18BC1615002B47F5 /* ADNPassportLaunchView.h in CopyFiles */,
 				93938B7718AC5440005B0F5A /* OvershareKit.h in CopyFiles */,
@@ -754,14 +756,12 @@
 				8895C34C18A3BA6B000B7F28 /* MediaPlayer.framework in Frameworks */,
 				8895C34A18A3BA65000B7F28 /* CoreText.framework in Frameworks */,
 				8895C34818A3BA5F000B7F28 /* CoreGraphics.framework in Frameworks */,
-				93E2406019083CB600FDE5B3 /* GooglePlus.framework in Frameworks */,
 				8895C34618A3BA59000B7F28 /* CoreLocation.framework in Frameworks */,
 				7FEE766E181ED867000F684A /* Foundation.framework in Frameworks */,
+				939130FE1908658B00C7678E /* GoogleOpenSource.framework in Frameworks */,
+				939130FF1908658B00C7678E /* GooglePlus.framework in Frameworks */,
 				8895C34418A3BA4F000B7F28 /* AssetsLibrary.framework in Frameworks */,
 				8895C34218A3BA48000B7F28 /* AddressBook.framework in Frameworks */,
-				8895C32918A3B890000B7F28 /* GoogleOpenSource.framework in Frameworks */,
-				93E2405F19083CB600FDE5B3 /* GoogleOpenSource.framework in Frameworks */,
-				8895C32A18A3B890000B7F28 /* GooglePlus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
