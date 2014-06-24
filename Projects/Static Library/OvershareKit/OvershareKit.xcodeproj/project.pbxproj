@@ -107,6 +107,7 @@
 		8895C34C18A3BA6B000B7F28 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8895C34B18A3BA6B000B7F28 /* MediaPlayer.framework */; };
 		8895C34E18A3BA70000B7F28 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8895C34D18A3BA70000B7F28 /* Security.framework */; };
 		8895C35018A3BA78000B7F28 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8895C34F18A3BA78000B7F28 /* SystemConfiguration.framework */; };
+		9334AA5C195A11E000BE429E /* OSKWebPageTitleUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 9334AA5B195A11E000BE429E /* OSKWebPageTitleUtility.m */; };
 		936CC25A18BC1612002B47F5 /* ADNLogin.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9397618E18AC4B9700FDA64C /* ADNLogin.h */; };
 		936CC25B18BC1615002B47F5 /* ADNPassportLaunchView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9397619018AC4B9700FDA64C /* ADNPassportLaunchView.h */; };
 		936E81AE18EB8EB0004D2366 /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 936E81AD18EB8EB0004D2366 /* SFHFKeychainUtils.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -708,6 +709,8 @@
 		8895C34B18A3BA6B000B7F28 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		8895C34D18A3BA70000B7F28 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		8895C34F18A3BA78000B7F28 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		9334AA5A195A11E000BE429E /* OSKWebPageTitleUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSKWebPageTitleUtility.h; sourceTree = "<group>"; };
+		9334AA5B195A11E000BE429E /* OSKWebPageTitleUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSKWebPageTitleUtility.m; sourceTree = "<group>"; };
 		936E81AC18EB8EB0004D2366 /* SFHFKeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFHFKeychainUtils.h; path = "../../../Dependencies/Pocket-SDK/SDK/SFHFKeychainUtils.h"; sourceTree = "<group>"; };
 		936E81AD18EB8EB0004D2366 /* SFHFKeychainUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFHFKeychainUtils.m; path = "../../../Dependencies/Pocket-SDK/SDK/SFHFKeychainUtils.m"; sourceTree = "<group>"; };
 		939130F319083EF600C7678E /* OSKUITextViewSubstitute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSKUITextViewSubstitute.h; sourceTree = "<group>"; };
@@ -841,6 +844,8 @@
 		7FEE77DC181ED8FE000F684A /* Overshare Kit */ = {
 			isa = PBXGroup;
 			children = (
+				9334AA5A195A11E000BE429E /* OSKWebPageTitleUtility.h */,
+				9334AA5B195A11E000BE429E /* OSKWebPageTitleUtility.m */,
 				7FEE77DD181ED8FE000F684A /* Images */,
 				7FE4109D1821994B00B13AB1 /* OvershareKit.h */,
 				7FD649EA1895EB480021BD50 /* OSKDraftsActivity.h */,
@@ -1296,6 +1301,7 @@
 				7F55A30E18425C6C004A3BCC /* OSKSessionController_Phone.m in Sources */,
 				9397619E18AC4BF800FDA64C /* PocketAPI.m in Sources */,
 				939130F519083EF600C7678E /* OSKUITextViewSubstitute.m in Sources */,
+				9334AA5C195A11E000BE429E /* OSKWebPageTitleUtility.m in Sources */,
 				7FEE78DD181ED8FE000F684A /* OSKMessageComposeViewController.m in Sources */,
 				7FEE78E1181ED8FE000F684A /* OSKOmnifocusActivity.m in Sources */,
 				7FEE78E4181ED8FE000F684A /* OSKPinboardUtility.m in Sources */,
