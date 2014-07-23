@@ -159,14 +159,28 @@
     NSString *systemAccountTypeIdentifier = [activity.class systemAccountTypeIdentifier];
     [accountStore requestAccessToAccountsWithAccountTypeIdentifier:systemAccountTypeIdentifier options:readOptions completion:^(BOOL successful, NSError *error) {
         if (successful == NO) {
-            [weakSelf showAlertForSystemAccountAccessNotGranted];
+            if([error code] == ACErrorAccountNotFound)
+            {
+                [weakSelf showAlertForNoSystemAccounts];
+            }
+            else
+            {
+                [weakSelf showAlertForSystemAccountAccessNotGranted];
+            }
             OSKLog(@"Access request failed for system accounts with account type identifier: %@", systemAccountTypeIdentifier);
             [weakSelf cancel];
         }
         else {
            [accountStore requestAccessToAccountsWithAccountTypeIdentifier:systemAccountTypeIdentifier options:writeOptions completion:^(BOOL successful, NSError *error) {
                if (successful == NO) {
-                   [weakSelf showAlertForSystemAccountAccessNotGranted];
+                   if([error code] == ACErrorAccountNotFound)
+                   {
+                       [weakSelf showAlertForNoSystemAccounts];
+                   }
+                   else
+                   {
+                       [weakSelf showAlertForSystemAccountAccessNotGranted];
+                   }
                    OSKLog(@"Access request failed for system accounts with account type identifier: %@", systemAccountTypeIdentifier);
                    [weakSelf cancel];
                }
