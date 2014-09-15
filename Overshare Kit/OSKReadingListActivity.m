@@ -85,7 +85,7 @@
         NSError *error = nil;
         [[SSReadingList defaultReadingList] addReadingListItemWithURL:item.url
                                                                 title:item.title
-                                                          previewText:item.sharingDescription
+                                                          previewText:item.itemDescription
                                                                 error:&error];
         __weak OSKReadingListActivity *weakSelf = self;
         dispatch_async(dispatch_get_main_queue(), ^{

@@ -161,11 +161,11 @@
 }
 
 + (NSString *)_todaysDateSuffix {
-	NSDate *today = [NSDate date];
-	NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-	formatter.dateFormat = @"yyyy-MM-dd";
-	NSString *suffix = [formatter stringFromDate:today];
-	return suffix;
+    NSDate *today = [NSDate date];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"yyyy-MM-dd";
+    NSString *suffix = [formatter stringFromDate:today];
+    return suffix;
 }
 
 + (NSString *)_queryParameterForAudience:(NSString *)audience {
