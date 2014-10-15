@@ -162,7 +162,14 @@ static NSString * const OSKAccountAuthenticationFailure_AccessNotGranted = @"OSK
     NSString *systemAccountTypeIdentifier = [activity.class systemAccountTypeIdentifier];
     [accountStore requestAccessToAccountsWithAccountTypeIdentifier:systemAccountTypeIdentifier options:readOptions completion:^(BOOL successful, NSError *error) {
         if (successful == NO) {
-            [weakSelf handleSystemAccountAccessFailure:OSKAccountAuthenticationFailure_AccessNotGranted withActivity:activity];
+            if([error code] == ACErrorAccountNotFound)
+            {
+                [weakSelf handleSystemAccountAccessFailure:OSKAccountAuthenticationFailure_NoAccounts withActivity:activity];
+            }
+            else
+            {
+                [weakSelf handleSystemAccountAccessFailure:OSKAccountAuthenticationFailure_AccessNotGranted withActivity:activity];
+            }
             [weakSelf cancel];
         }
         else {
