@@ -112,11 +112,11 @@
 		936CC25A18BC1612002B47F5 /* ADNLogin.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9397618E18AC4B9700FDA64C /* ADNLogin.h */; };
 		936CC25B18BC1615002B47F5 /* ADNPassportLaunchView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9397619018AC4B9700FDA64C /* ADNPassportLaunchView.h */; };
 		936E81AE18EB8EB0004D2366 /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 936E81AD18EB8EB0004D2366 /* SFHFKeychainUtils.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9381BB5E1A85262D00933017 /* GoogleOpenSource.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 93E2405C19083CB600FDE5B3 /* GoogleOpenSource.framework */; };
+		9381BB5F1A85263200933017 /* GooglePlus.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 93E2405E19083CB600FDE5B3 /* GooglePlus.framework */; };
 		939130F519083EF600C7678E /* OSKUITextViewSubstitute.m in Sources */ = {isa = PBXBuildFile; fileRef = 939130F419083EF600C7678E /* OSKUITextViewSubstitute.m */; };
 		939130FE1908658B00C7678E /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93E2405C19083CB600FDE5B3 /* GoogleOpenSource.framework */; };
 		939130FF1908658B00C7678E /* GooglePlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93E2405E19083CB600FDE5B3 /* GooglePlus.framework */; };
-		939131001908659700C7678E /* GoogleOpenSource.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 93E2405C19083CB600FDE5B3 /* GoogleOpenSource.framework */; };
-		939131011908659700C7678E /* GooglePlus.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 93E2405E19083CB600FDE5B3 /* GooglePlus.framework */; };
 		93938B7718AC5440005B0F5A /* OvershareKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7FE4109D1821994B00B13AB1 /* OvershareKit.h */; };
 		93938B7818AC5440005B0F5A /* OSKDraftsActivity.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7FD649EA1895EB480021BD50 /* OSKDraftsActivity.h */; };
 		93938B7918AC5440005B0F5A /* OSKPresentationManager_Protected.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F4FF50E18516A5A00BFFF2B /* OSKPresentationManager_Protected.h */; };
@@ -244,14 +244,23 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		9381BB5D1A85261700933017 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				9381BB5E1A85262D00933017 /* GoogleOpenSource.framework in CopyFiles */,
+				9381BB5F1A85263200933017 /* GooglePlus.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		93938B7618AC5426005B0F5A /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
-				939131001908659700C7678E /* GoogleOpenSource.framework in CopyFiles */,
-				939131011908659700C7678E /* GooglePlus.framework in CopyFiles */,
 				936CC25A18BC1612002B47F5 /* ADNLogin.h in CopyFiles */,
 				936CC25B18BC1615002B47F5 /* ADNPassportLaunchView.h in CopyFiles */,
 				93938B7718AC5440005B0F5A /* OvershareKit.h in CopyFiles */,
@@ -1248,6 +1257,7 @@
 				7FEE7666181ED867000F684A /* Sources */,
 				7FEE7667181ED867000F684A /* Frameworks */,
 				93938B7618AC5426005B0F5A /* CopyFiles */,
+				9381BB5D1A85261700933017 /* CopyFiles */,
 			);
 			buildRules = (
 			);
